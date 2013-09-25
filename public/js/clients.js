@@ -1,17 +1,16 @@
 function loadClients() {
-  var currentClientsElement = document.getElementById("current_clients");
-  var currentClientsListElement = currentClientsElement.getElementsByTagName("ul")[0];
+  var currentClientsElement = $("#current_clients");
+  var currentClientsListElement = $("#current_clients ul:first");
   
-  clients["clients"]["current"].forEach(function(element, index, array) { 
-    var html = "";
-    html += "<li class='info'>";
-    html += "<h3>" + element["name"] + "</h3>";
-    // Other hand written html
-    html += "</li>";
+  $.each(clients["clients"]["current"], function(index, element) { 
+    var h3 = $('<h3></h3>');
+    h3.text(element["name"]);
 
-    currentClientsListElement.innerHTML += html;
+    var li = $('<li class="info"></li>');
+    li.html(h3);
+
+    currentClientsListElement.append(li);
   });
 
-  var currentClientsLoadingElement = currentClientsElement.getElementsByTagName("em")[0];
-  currentClientsLoadingElement.parentNode.removeChild(currentClientsLoadingElement);
+  $("#current_clients em:first").hide();
 }

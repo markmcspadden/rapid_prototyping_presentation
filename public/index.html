@@ -2,6 +2,7 @@
   <head>
     <title>Filler Clients</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/clients.json"></script>
     <script type="text/javascript" src="js/clients.js"></script>
   </head>
@@ -70,7 +71,12 @@
     </footer>
 
     <script type="text/javascript">
-      loadClients();
+      $(function() {
+        loadClients();
+      });
+      
+      // Same as
+      // $(document).ready(function() { loadClients(); });
     </script>
   </body>
 
