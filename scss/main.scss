@@ -18,6 +18,23 @@ footer {
   margin-top: 20px;
 }
 
+nav {
+  @extend .pull-right;
+
+  margin-top: 5px;
+
+  a, a:hover {
+    color: #880000;
+  }
+
+  a.selected {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+
+
 section.location {
   @extend .text-muted;
 }
@@ -56,7 +73,7 @@ section ul {
     }
   }
 
-  li.info {
+  li.current {
     @extend .panel-info;
   }
 }

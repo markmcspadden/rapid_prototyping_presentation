@@ -15,11 +15,18 @@
       <section id="location" class="text-muted">
         You are currently in Dallas, TX
       </section>
-      <section id="current_clients">
-        <h2>Clients Nearby</h2>
-      </section>
-      <section id="potential_clients">
-        <h2>Potential Clients Nearby</h2>
+      <section id="clients">
+        <nav>
+          <a class="selected" data-status="current">Current</a>&nbsp;|
+          <a class="" data-status="potential">Potential</a>
+        </nav>
+        <h2>Nearby Clients</h2>
+        <div id="clients_container">
+          <!-- 
+            Do not put the handlebars template in here
+            If you do, it will be removed with the first load
+          -->
+        </div>
       </section>
 
       <script id="clients-template" type="text/x-handlebars-template">
@@ -58,6 +65,12 @@
     <script type="text/javascript">
       $(function() {
         fetchClients();
+
+        $('nav a').click(function() {
+          $('nav a.selected').removeClass('selected');
+          $(this).addClass('selected');
+          fetchClients();
+        })
       });
       
       // Same as

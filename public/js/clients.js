@@ -11,18 +11,10 @@ function fetchClients() {
 }
 
 function loadClients(clients) {
-  loadCurrentClients(clients["clients"]["current"]);
-  loadPotentialClients(clients["clients"]["potential"]);
-}
+  var status = $('nav a.selected:first').attr('data-status');
 
-function loadCurrentClients(clients) {
-  var html = clientsHTML(clients, "info");
-  $("#current_clients").append(html);
-}
-
-function loadPotentialClients(clients) {
-  var html = clientsHTML(clients, "");
-  $("#potential_clients").append(html);
+  var html = clientsHTML(clients["clients"][status], status);
+  $("#clients_container").html(html);
 }
 
 function clientsHTML(clients, status) {

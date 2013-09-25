@@ -2517,7 +2517,7 @@ input[type="button"].btn-block {
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
-  .dropdown-menu.pull-right, section ul li article aside.dropdown-menu {
+  .dropdown-menu.pull-right, nav.dropdown-menu, section ul li article aside.dropdown-menu {
     right: 0;
     left: auto; }
   .dropdown-menu .divider {
@@ -2575,7 +2575,7 @@ input[type="button"].btn-block {
   top: 0;
   z-index: 990; }
 
-.pull-right > .dropdown-menu, section ul li article aside > .dropdown-menu {
+.pull-right > .dropdown-menu, nav > .dropdown-menu, section ul li article aside > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -3192,8 +3192,9 @@ body > .navbar-collapse {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.navbar-nav.pull-right > li > .dropdown-menu, section ul li article aside.navbar-nav > li > .dropdown-menu,
+.navbar-nav.pull-right > li > .dropdown-menu, nav.navbar-nav > li > .dropdown-menu, section ul li article aside.navbar-nav > li > .dropdown-menu,
 .navbar-nav > li > .dropdown-menu.pull-right,
+.navbar-nav > li > nav.dropdown-menu,
 section ul li article .navbar-nav > li > aside.dropdown-menu {
   left: auto;
   right: 0; }
@@ -3761,7 +3762,7 @@ a.thumbnail:focus {
 
 .media > .pull-left, section ul li article.media > div {
   margin-right: 10px; }
-.media > .pull-right, section ul li article .media > aside {
+.media > .pull-right, .media > nav, section ul li article .media > aside {
   margin-left: 10px; }
 
 .media-list {
@@ -3942,15 +3943,15 @@ a.list-group-item {
   .panel-danger > .panel-footer + .panel-collapse .panel-body, .panel-danger > .panel-footer + .panel-collapse section ul li article, section ul li .panel-danger > .panel-footer + .panel-collapse article {
     border-bottom-color: #eed3d7; }
 
-.panel-info, section ul li.info {
+.panel-info, section ul li.current {
   border-color: #bce8f1; }
-  .panel-info > .panel-heading, section ul li.info > .panel-heading, section ul li .panel-info > h3, section ul li.info > h3 {
+  .panel-info > .panel-heading, section ul li.current > .panel-heading, section ul li .panel-info > h3, section ul li.current > h3 {
     color: #3a87ad;
     background-color: #d9edf7;
     border-color: #bce8f1; }
-    .panel-info > .panel-heading + .panel-collapse .panel-body, section ul li.info > .panel-heading + .panel-collapse .panel-body, section ul li .panel-info > h3 + .panel-collapse .panel-body, section ul li.info > h3 + .panel-collapse .panel-body, .panel-info > .panel-heading + .panel-collapse section ul li article, section ul li .panel-info > .panel-heading + .panel-collapse article, section ul li.info > .panel-heading + .panel-collapse article, section ul li .panel-info > h3 + .panel-collapse article, section ul li.info > h3 + .panel-collapse article {
+    .panel-info > .panel-heading + .panel-collapse .panel-body, section ul li.current > .panel-heading + .panel-collapse .panel-body, section ul li .panel-info > h3 + .panel-collapse .panel-body, section ul li.current > h3 + .panel-collapse .panel-body, .panel-info > .panel-heading + .panel-collapse section ul li article, section ul li .panel-info > .panel-heading + .panel-collapse article, section ul li.current > .panel-heading + .panel-collapse article, section ul li .panel-info > h3 + .panel-collapse article, section ul li.current > h3 + .panel-collapse article {
       border-top-color: #bce8f1; }
-  .panel-info > .panel-footer + .panel-collapse .panel-body, section ul li.info > .panel-footer + .panel-collapse .panel-body, .panel-info > .panel-footer + .panel-collapse section ul li article, section ul li .panel-info > .panel-footer + .panel-collapse article, section ul li.info > .panel-footer + .panel-collapse article {
+  .panel-info > .panel-footer + .panel-collapse .panel-body, section ul li.current > .panel-footer + .panel-collapse .panel-body, .panel-info > .panel-footer + .panel-collapse section ul li article, section ul li .panel-info > .panel-footer + .panel-collapse article, section ul li.current > .panel-footer + .panel-collapse article {
     border-bottom-color: #bce8f1; }
 
 .well {
@@ -4460,7 +4461,7 @@ body.modal-open {
 .clearfix:after {
   clear: both; }
 
-.pull-right, section ul li article aside {
+.pull-right, nav, section ul li article aside {
   float: right !important; }
 
 .pull-left, section ul li article > div {
@@ -4935,6 +4936,14 @@ header {
 
 footer {
   margin-top: 20px; }
+
+nav {
+  margin-top: 5px; }
+  nav a, nav a:hover {
+    color: #880000; }
+  nav a.selected {
+    font-size: 1.5em;
+    font-weight: bold; }
 
 section ul li h3 {
   margin-top: 0; }
