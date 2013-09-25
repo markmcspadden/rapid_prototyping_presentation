@@ -1,5 +1,5 @@
 function fetchClients() {
-  $.ajax("js/clients.json", {
+  $.ajax("js/clients.json?lat=" + current_latitude + "&lng=" + current_longitude, {
     dataType:"json",
     error:function(error) {
       alert("Error in fetching clients :(\n\n" + error["statusText"]);

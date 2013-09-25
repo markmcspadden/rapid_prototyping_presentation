@@ -5,6 +5,8 @@
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/clients.js"></script>
+    <script type="text/javascript" src="js/geolocation.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
   </head>
   <body>
     <header class="header">
@@ -12,8 +14,8 @@
     </header>
 
     <main>
-      <section id="location" class="text-muted">
-        You are currently in Dallas, TX
+      <section id="location">
+        
       </section>
       <section id="clients">
         <nav>
@@ -64,13 +66,15 @@
 
     <script type="text/javascript">
       $(function() {
+        get_location();
+
         fetchClients();
 
         $('nav a').click(function() {
           $('nav a.selected').removeClass('selected');
           $(this).addClass('selected');
           fetchClients();
-        })
+        });
       });
       
       // Same as
