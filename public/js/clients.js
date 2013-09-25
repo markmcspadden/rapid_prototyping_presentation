@@ -1,15 +1,27 @@
-function loadClients() {
-  loadCurrentClients();
-  loadPotentialClients();
+function fetchClients() {
+  $.ajax("js/clients.json", {
+    dataType:"json",
+    error:function(error) {
+      alert("Error in fetching clients :(\n\n" + error["statusText"]);
+    },
+    success:function(data) {
+      loadClients(data);
+    }
+  });
 }
 
-function loadCurrentClients() {
-  var html = clientsHTML(clients["clients"]["current"], "info");
+function loadClients(clients) {
+  loadCurrentClients(clients["clients"]["current"]);
+  loadPotentialClients(clients["clients"]["potential"]);
+}
+
+function loadCurrentClients(clients) {
+  var html = clientsHTML(clients, "info");
   $("#current_clients").append(html);
 }
 
-function loadPotentialClients() {
-  var html = clientsHTML(clients["clients"]["potential"], "");
+function loadPotentialClients(clients) {
+  var html = clientsHTML(clients, "");
   $("#potential_clients").append(html);
 }
 
