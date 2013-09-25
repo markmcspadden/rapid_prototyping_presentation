@@ -3,6 +3,7 @@
     <title>Filler Clients</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/handlebars.js"></script>
     <script type="text/javascript" src="js/clients.json"></script>
     <script type="text/javascript" src="js/clients.js"></script>
   </head>
@@ -17,9 +18,31 @@
       </section>
       <section id="current_clients">
         <h2>Clients Nearby</h2>
-        <ul>
-          <em>Loading Clients Near You...</em>
-        </ul>
+
+        <script id="clients-template" type="text/x-handlebars-template">
+          <ul>
+            {{#each clients}}
+              <li class="info">
+                <h3>{{name}}</h3>
+                <article>
+                  <div>
+                    <p class="reps">
+                      {{reps}}
+                    </p>
+                  </div>
+                  <aside>
+                    <p class="address">
+                      {{address}}
+                    </p>
+                    <p class="phone">
+                      <a>{{phone}}</a>
+                    </p>
+                  </aside>
+                </article>
+              </li>
+            {{/each}}
+          </ul>
+        </script>
       </section>
       <section id="potential_clients">
         <h2>Potential Clients Nearby</h2>
