@@ -5,7 +5,8 @@ var clients = {
         "name":"Exxon Mobil",
         "reps":"Steve Smith, Lacy James",
         "address":"5959 Las Colinas Blvd., Irving, TX. 75039",
-        "phone":"972-444-1000" 
+        "phone":"972-444-1000",
+        "notes":"Hellen March is our main contact." 
       },
       { 
         "name":"AT&T",
@@ -19,7 +20,8 @@ var clients = {
         "name":"ABC Co",
         "reps":"None",
         "address":"5959 Las Colinas Blvd., Irving, TX. 75039",
-        "phone":"972-444-1000" 
+        "phone":"972-444-1000",
+        "notes":"Haven't heard from in 3 months." 
       },
       { 
         "name":"XYZ Co",
