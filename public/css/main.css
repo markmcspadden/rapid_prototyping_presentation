@@ -4947,3 +4947,8 @@ nav {
 
 section ul li h3 {
   margin-top: 0; }
+
+/* Responsive: Phones and down */
+@media (max-width: 375px) {
+  h2 span {
+    display: none; } }
