@@ -18,75 +18,35 @@
       </section>
       <section id="current_clients">
         <h2>Clients Nearby</h2>
-
-        <script id="clients-template" type="text/x-handlebars-template">
-          <ul>
-            {{#each clients}}
-              <li class="info">
-                <h3>{{name}}</h3>
-                <article>
-                  <div>
-                    <p class="reps">
-                      {{reps}}
-                    </p>
-                  </div>
-                  <aside>
-                    <p class="address">
-                      {{address}}
-                    </p>
-                    <p class="phone">
-                      <a>{{phone}}</a>
-                    </p>
-                  </aside>
-                </article>
-              </li>
-            {{/each}}
-          </ul>
-        </script>
       </section>
       <section id="potential_clients">
         <h2>Potential Clients Nearby</h2>
-        <ul>
-          <li>
-            <h3>ABC Co</h3>
-            <article>
-              <div>
-                <p class="reps">
-                  None
-                </p>
-              </div>
-              <aside>
-                <p class="address">
-                  5959 Las Colinas Blvd.
-                  Irving, TX. 75039 
-                </p>
-                <p class="phone">
-                  <a>972-444-1000</a>
-                </p>
-              </aside>
-            </article>
-          </li>
-          <li>
-            <h3>XYZ Co</h3>
-            <article>
-              <div>
-                <p class="reps">
-                  Hannah Lawerance, Jacob Hubbard
-                </p>
-              </div>
-              <aside>
-                <p class="address">
-                  208 S. Akard St.
-                  Dallas, TX. 75202 
-                </p>
-                <p class="phone">
-                  <a>210-821-4105</a>
-                </p>
-              </aside>
-            </article>
-          </li>
-        </ul>
       </section>
+
+      <script id="clients-template" type="text/x-handlebars-template">
+        <ul>
+          {{#each clients}}
+            <li class="{{../status}}">
+              <h3>{{name}}</h3>
+              <article>
+                <div>
+                  <p class="reps">
+                    {{reps}}
+                  </p>
+                </div>
+                <aside>
+                  <p class="address">
+                    {{address}}
+                  </p>
+                  <p class="phone">
+                    <a>{{phone}}</a>
+                  </p>
+                </aside>
+              </article>
+            </li>
+          {{/each}}
+        </ul>
+      </script>
     </main>
 
     <footer>

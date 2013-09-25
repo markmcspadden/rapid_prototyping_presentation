@@ -15,6 +15,18 @@ var clients = {
       }
     ],
     "potential": [
+      { 
+        "name":"ABC Co",
+        "reps":"None",
+        "address":"5959 Las Colinas Blvd., Irving, TX. 75039",
+        "phone":"972-444-1000" 
+      },
+      { 
+        "name":"XYZ Co",
+        "reps":"Hannah Lawerance, Jacob Hubbard",
+        "address":"208 S. Akard St., Dallas, TX. 75202",
+        "phone":"210-821-4105" 
+      }
     ]
   }
 };
