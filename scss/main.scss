@@ -1,0 +1,65 @@
+@import "./sass-bootstrap-master/lib/bootstrap";
+
+body {
+  @extend .container;
+  padding-top: 0;
+  max-width: 730px;
+}
+
+header {
+  @extend .header;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+footer {
+  @extend .text-muted;
+  @extend small;
+  margin-top: 20px;
+}
+
+section.location {
+  @extend .text-muted;
+}
+
+section ul {
+  @extend .list-unstyled;
+
+  li {
+    @extend .panel;
+    @extend .panel-default;
+
+    h3 {
+      @extend .panel-heading;
+      margin-top: 0;
+    }
+
+    article {
+      @extend .panel-body;
+
+      >div {
+        @extend .pull-left;
+      }
+
+      aside {
+        @extend .pull-right;
+      }
+
+      .phone {
+        @extend .text-right;
+
+        a {
+          @extend .btn;
+          @extend .btn-primary;
+        }
+      }
+    }
+  }
+
+  li.info {
+    @extend .panel-info;
+  }
+}
+
+
+
