@@ -2,6 +2,8 @@
   <head>
     <title>Filler Clients</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script type="text/javascript" src="js/clients.json"></script>
+    <script type="text/javascript" src="js/clients.js"></script>
   </head>
   <body>
     <header class="header">
@@ -12,50 +14,13 @@
       <section id="location" class="text-muted">
         You are currently in Dallas, TX
       </section>
-      <section id="clients">
+      <section id="current_clients">
         <h2>Clients Nearby</h2>
         <ul>
-          <li class="info">
-            <h3>Exxon Mobil</h3>
-            <article>
-              <div>
-                <p class="reps">
-                  Steve Smith, Lacy James
-                </p>
-              </div>
-              <aside>
-                <p class="address">
-                  5959 Las Colinas Blvd.
-                  Irving, TX. 75039 
-                </p>
-                <p class="phone">
-                  <a>972-444-1000</a>
-                </p>
-              </aside>
-            </article>
-          </li>
-          <li class="info">
-            <h3>AT&T</h3>
-            <article>
-              <div>
-                <p class="reps">
-                  Hannah Lawerance, Jacob Hubbard
-                </p>
-              </div>
-              <aside>
-                <p class="address">
-                  208 S. Akard St.
-                  Dallas, TX. 75202 
-                </p>
-                <p class="phone">
-                  <a>210-821-4105</a>
-                </p>
-              </aside>
-            </article>
-          </li>
+          <em>Loading Clients Near You...</em>
         </ul>
       </section>
-      <section id="clients">
+      <section id="potential_clients">
         <h2>Potential Clients Nearby</h2>
         <ul>
           <li>
@@ -103,6 +68,10 @@
     <footer>
       Built by the team that imagines a better world and works towards it
     </footer>
+
+    <script type="text/javascript">
+      loadClients();
+    </script>
   </body>
 
 </html>
